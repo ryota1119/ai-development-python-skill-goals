@@ -29,14 +29,18 @@ finally:
 """
 3. ZeroDivisionError と TypeError を1つの try ブロックでそれぞれ別の except
 で捕捉する
-"""
-input_number = input("数字を入力して下さい。"))
 
-try:
-    n = 10 / input_number
-except ZeroDivisionError as zde:
-    print(zde)
-except TypeError as te:
-    print(te)
-else:
-    print(n)
+  0   → ZeroDivisionError（ゼロ除算）
+  "x" → TypeError（int と str は / で割れない）
+"""
+values = [2, 0, "x"]
+
+for v in values:
+    try:
+        n = 10 / v
+    except ZeroDivisionError as zde:
+        print(f"ZeroDivisionError: {zde}")
+    except TypeError as te:
+        print(f"TypeError: {te}")
+    else:
+        print(f"結果: {n}")
