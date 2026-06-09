@@ -1,19 +1,23 @@
 # CLAUDE.md
 
 ## プロジェクト概要
+
 西日本新聞メディアラボ DXソリューション部・篠原亮太のClaude活用目標の学習・検証用リポジトリ。
 claude.aiとClaude Codeを駆使して業務効率化を図ることを目的とする。
 
 ## 目標
+
 - claude.aiのコネクタ（Notion/Backlog/Google Drive/Gmail/GitHub）を活用した業務効率化
 - Claude CodeのSkill・Plugin・Agentを駆使した開発効率向上
 - 作業時間2〜3割削減（前年度比30〜50%削減）
 
 ## 技術スタック
+
 - 言語：Python、Ruby、JavaScript
 - 関連ツール：Backlog MCP Server、Notion MCP、GitHub連携
 
 ## 開発環境
+
 - OS：macOS（Apple Silicon）
 - パッケージマネージャ：Homebrew
 - Claude Code：v2.1.150（Homebrewインストール）
@@ -27,18 +31,19 @@ learning_basic_python/
 ├── uv.lock
 ├── .python-version
 ├── .venv/
-├── day1/
-│   ├── 01_variables.py
-│   ├── 02_operators.py
-│   └── 03_io.py
-├── day2/
+├── phase1/
+│   └── 1-1
+│       ├── 01_variables.py
+│       ├── 02_operators.py
+│       └── 03_io.py
+├── phase2/
 │   └── ...
 └── ...
 ```
 
-- Dayごとにディレクトリを切る
+- phaseごとにディレクトリを切る
 - ファイル名は `01_` のように番号プレフィックスをつける
-- 実行: `uv run python day1/01_variables.py`
+- 実行: `uv run python phase1/1-1/01_variables.py`
 
 ## 学習者プロフィール
 
@@ -56,17 +61,7 @@ learning_basic_python/
 
 ### カリキュラム（Notionチケット連動）
 
-| Day | テーマ                      | 日付 |
-| --- | --------------------------- | ---- |
-| 1   | 環境構築 + 基本文法         | 6/1  |
-| 2   | 制御構文 + データ構造       | 6/3  |
-| 3   | 関数                        | 6/5  |
-| 4   | モジュール + 標準ライブラリ | 6/8  |
-| 5   | ファイル操作 + 例外処理     | 6/10 |
-| 6   | クラス入門                  | 6/12 |
-| 7   | 型ヒント + mypy             | 6/15 |
-| 8   | テスト（pytest）            | 6/17 |
-| 9   | 小さな成果物を作る          | 6/19 |
+https://app.notion.com/p/AI-Python-372b5337a08b80ca9331d94453544db9?source=copy_linkを参照
 
 ## コードを書くときの方針
 
@@ -107,15 +102,19 @@ learning_basic_python/
 - Day 7 以前のコードへの型ヒント強制
 
 ## Notionチケット管理
+
+- Notionプロジェクト：https://app.notion.com/p/AI-Python-372b5337a08b80ca9331d94453544db9?source=copy_link
 - Ticketsデータベース：https://www.notion.so/f2db5337a08b82a08490817d2860a224
 - 着手時: ステータスを「進行中」に更新
 - Day 完了時: ステータスを「完了」に更新、実施内容のサマリをチケット本文に記録する
 - 担当者: ShinoharaRay
 
 ## 進め方のルール
+
 - 各フェーズ完了時にNotionチケットをサマリして完了にする
 - 詰まったらclaude.aiで壁打ちしてからClaude Codeで実装する
 
 ## 関連リンク
-- Notionプロジェクト：https://www.notion.so/Claude-372b5337a08b80119977c3fc3da5caf1
-- Backlogスペース：dev-ml（株式会社西日本新聞メディアラボ）
+
+- Notionプロジェクト：https://app.notion.com/p/AI-Python-372b5337a08b80ca9331d94453544db9?source=copy_link
+- Ticketsデータベース：https://www.notion.so/f2db5337a08b82a08490817d2860a224
