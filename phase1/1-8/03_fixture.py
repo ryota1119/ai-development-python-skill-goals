@@ -46,6 +46,11 @@ def test_remove_正常系(cart):
     assert cart.items == []
 
 
+def test_remove_異常系(cart):
+    with pytest.raises(ValueError):
+        cart.remove("存在しないアイテム")
+
+
 def test_count_正常系(cart):
     cart.add("item1")
     assert cart.count() == 1
